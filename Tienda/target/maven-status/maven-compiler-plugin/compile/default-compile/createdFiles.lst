@@ -1,0 +1,7 @@
+tienda\controller\ProductoDetalleServlet.class
+tienda\config\ConexionBD.class
+tienda\controller\CatalogoServlet.class
+tienda\model\ProductoDAO.class
+tienda\model\Producto.class
+tienda\controller\BuscarApiServlet.class
+tienda\controller\AdminServlet.class
