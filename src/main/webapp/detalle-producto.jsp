@@ -215,109 +215,43 @@
     </header>
 
     <!-- Overlay y Panel Lateral de Búsqueda -->
-<div class="search-overlay" id="searchOverlay"></div>
+<!-- Menú Lateral Desplegable (Off-canvas Drawer) -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<aside class="sidebar-drawer" id="sidebarDrawer">
+    
+    <nav class="sidebar-nav">
+        <!-- Ver Catálogo Completo (Abre la nueva pantalla dedicada catalogo.jsp) -->
+<a href="CatalogoServlet?categoria=todos&vista=catalogo">
+    <span>Ver Catálogo Completo</span>
+</a>
 
-<aside class="search-drawer" id="searchDrawer">
-
-    <div class="search-drawer-header">
-
-        <div class="search-input-wrapper">
-            <input type="text"
-                   id="searchInput"
-                   placeholder="Buscar..."
-                   autocomplete="off">
-
-            <button type="button"
-                    id="clearSearchBtn"
-                    class="clear-search-btn">
-                Borrar
-            </button>
+<!-- Filtros por categoría (También abren catalogo.jsp con el filtro activado) -->
+<a href="CatalogoServlet?categoria=Mano">
+    <span>Carteras de Mano</span>
+</a>
+<a href="CatalogoServlet?categoria=Totes">
+    <span>Totes</span>
+</a>
+<a href="CatalogoServlet?categoria=Mochilas">
+    <span>Mochilas</span>
+</a>
+<a href="CatalogoServlet?categoria=Bandoleras">
+    <span>Bandoleras</span>
+</a>
+        <!-- CÓDIGO CORRECTO -->
+<a href="nosotros.jsp">
+    <span>Nosotros</span>
+</a>
+    </nav>
+    
+    <div class="sidebar-footer">
+        <div class="sidebar-socials">
+            <a href="#" class="social-icon"><i class="bx bxl-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="bx bxl-tiktok"></i></a>
         </div>
-
-        <button type="button"
-                class="close-search-btn"
-                id="closeSearchBtn"
-                aria-label="Cerrar búsqueda">
-            &times;
-        </button>
-
+        <div class="footer-divider"></div>
+        <a href="#" class="sidebar-account-link">Cuenta</a>
     </div>
-
-    <div class="search-tabs"
-         id="searchTabs"
-         style="display: none;">
-
-        <button type="button"
-                class="search-tab-btn active"
-                data-tab="productsTab">
-            Productos
-        </button>
-
-        <button type="button"
-                class="search-tab-btn"
-                data-tab="collectionsTab">
-            Colecciones
-        </button>
-
-    </div>
-
-    <div class="search-drawer-body">
-
-        <div id="searchSuggestions"
-             class="search-suggestions">
-
-            <ul class="suggestion-list">
-
-                <li>
-                    <a href="CatalogoServlet?categoria=Mano">
-                        Carteras de Mano
-                    </a>
-                </li>
-
-                <li>
-                    <a href="CatalogoServlet?categoria=Totes">
-                        Totes
-                    </a>
-                </li>
-
-                <li>
-                    <a href="CatalogoServlet?categoria=Mochilas">
-                        Mochilas
-                    </a>
-                </li>
-
-                <li>
-                    <a href="CatalogoServlet?categoria=Bandoleras">
-                        Bandoleras
-                    </a>
-                </li>
-
-            </ul>
-
-        </div>
-
-        <div id="productsTab"
-             class="search-tab-content active"
-             style="display: none;">
-
-            <div id="searchResultsList"
-                 class="search-results-list">
-            </div>
-
-        </div>
-
-        <div id="collectionsTab"
-             class="search-tab-content"
-             style="display: none;">
-
-            <div id="collectionsResultsList"
-                 class="collections-results-list">
-            </div>
-
-        </div>
-
-    </div>
-
 </aside>
     
     <!-- Modal / Drawer Lateral de Tu Carrito -->
